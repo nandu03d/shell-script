@@ -17,7 +17,7 @@ validate(){
     fi
 }
 
-dnf install mysqll -y
+dnf install mysql -y
 validate $? "installing mysql"
 
 dnf install git -y
