@@ -1,3 +1,3 @@
 #!/bin/bash
-echo "nandu: hi abhi"
-echo "abhi: hi nandu"
+echo "nandu: hi naveen"
+echo "naveen: hi nandu"
