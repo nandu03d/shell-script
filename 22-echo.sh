@@ -20,7 +20,7 @@ N="\e[0m"
 # ech -e "$R hello" &>>$logFile
 # validate $? "status is"
 
-echo "$G hi"
+echo -e "$G hi"
 if [ $? -ne 0 ]
 then
     echo -e "$R fail" &>>$logFile
@@ -29,7 +29,7 @@ else
     echo -e "$G success" &>>$logFile
 fi
 
-sudo $R dnf install mysqlll -y
+sudo -e $R dnf install mysqlll -y
 if [ $? -ne 0 ]
 then
     echo -e "$R installation of mysql is FAILURE" &>>$logFile
