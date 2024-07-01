@@ -18,10 +18,10 @@ N="\e[0m"
 validate(){
 if [ $? -ne 0 ]
 then
-    echo -e "$R fail" &>>$logFile
+    echo -e "$R fail $N" &>>$logFile
     exit 1
 else
-    echo -e "$G success" &>>$logFile
+    echo -e "$G success $N" &>>$logFile
 fi
 }
 echo "hi" &>>$logFile
