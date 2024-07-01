@@ -14,8 +14,8 @@ validate(){
         echo -e "$2...$G SUCCESS"
     fi
 }
-echo -e "$G hi $N" &>>$logFile
+echo -e "hi" &>>$logFile
 validate $? "status is"
 
-ech -e "$R hello $N" &>>$logFile
+ech -e "hello" &>>$logFile
 validate $? "status is"
