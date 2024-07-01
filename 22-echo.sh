@@ -23,8 +23,8 @@ validate $? "status is"
 sudo dnf install mysqlll -y
 if [ $? -ne 0 ]
 then
-    echo "$R installation of mysql is FAILURE"
+    echo -e "$R installation of mysql is FAILURE" &>>$logFile
     exit 1
 else
-    echo "$G installation of mysql is SUCCESS"
+    echo -e "$G installation of mysql is SUCCESS" &>>$logFile
 fi
