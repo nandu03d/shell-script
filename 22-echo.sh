@@ -20,13 +20,13 @@ N="\e[0m"
 # ech -e "$R hello" &>>$logFile
 # validate $? "status is"
 
-echo "hi" &>>$logFile
+echo "hi"
 if [ $? -ne 0 ]
 then
-    echo -e "$R yes" &>>$logFile
+    echo -e "$R fail" &>>$logFile
     exit 1
 else
-    echo -e "$G no" &>>$logFile
+    echo -e "$G success" &>>$logFile
 fi
 
 sudo dnf install mysqlll -y
