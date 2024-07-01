@@ -19,3 +19,6 @@ validate $? "status is"
 
 ech -e "hello" &>>$logFile
 validate $? "status is"
+
+echo -e "bye" &>>$logFile
+validate $? "status is"
