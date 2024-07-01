@@ -5,7 +5,20 @@ logFile=/tmp/$scriptName-$timeStamp.log
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
+validate(){
+    if [ $1 -ne 0 ]
+    then
+        echo -e "$2...$R FAILURE"
+        exit 1
+    else
+        echo -e "$2...$G SUCCESS"
+    fi
+}
 echo -e "$G hi $N" 1>>$logFile
+validate $? "status is"
+
 ech -e "$R hello $N" 2>>$logFile
-exit 1
+validate $? "status is"
+
 echo -e "$G\e[32m bye $N" 1>>$logFile
+validate $? "status is"
