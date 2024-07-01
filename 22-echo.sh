@@ -8,17 +8,17 @@ N="\e[0m"
 validate(){
     if [ $1 -ne 0 ]
     then
-        echo -e "$2...$R FAILURE"
+        echo -e "$2...$R FAILURE $N"
         exit 1
     else
-        echo -e "$2...$G SUCCESS"
+        echo -e "$2...$G SUCCESS $N"
     fi
 }
-echo -e "hi" &>>$logFile
+echo -e "$G hi $N" &>>$logFile
 validate $? "status is"
 
-ech -e "hello" &>>$logFile
+dnf install mysqlll -y &>>$logFile
 validate $? "status is"
 
-echo -e "bye" &>>$logFile
+echo -e "$G bye $N" &>>$logFile
 validate $? "status is"
