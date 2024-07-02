@@ -5,15 +5,6 @@ logFile=/tmp/$scriptName-$timeStamp.log
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
-# validate(){
-#     if [ $1 -ne 0 ]
-#     then
-#         echo -e "$2...$R FAILURE $N"
-#         exit 1
-#     else
-#         echo -e "$2...$G SUCCESS $N"
-#     fi
-# }
 
 validate(){
 if [ $? -ne 0 ]
@@ -29,6 +20,16 @@ validate $? "status is"
 
 ech "bye" &>>$logFile
 validate $? "status is"
+
+# validate(){
+#     if [ $1 -ne 0 ]
+#     then
+#         echo -e "$2...$R FAILURE $N"
+#         exit 1
+#     else
+#         echo -e "$2...$G SUCCESS $N"
+#     fi
+# }
 
 # echo "hi"
 # if [ $? -ne 0 ]
